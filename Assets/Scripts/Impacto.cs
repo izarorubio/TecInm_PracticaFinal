@@ -9,6 +9,7 @@ public class Impacto : MonoBehaviour
         if (collision.gameObject.CompareTag("Pared"))
         {
             Destroy(collision.gameObject);
+            FindAnyObjectByType<Marcador>().SumarPuntos();
         }
 
         StartCoroutine(Destruir3Segundos());

@@ -30,5 +30,6 @@ public class Disparo : MonoBehaviour
         GameObject bala = Instantiate(balaPrefab, BalaAparece.position, BalaAparece.rotation);
         Rigidbody balaRb = bala.GetComponent<Rigidbody>();
         balaRb.AddForce(bala.transform.forward * velocidad);
+
     }
 }
