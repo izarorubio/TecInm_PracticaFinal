@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 20
   velocidadRotacion: 50
-  velocidadRotacionCabeza: 20
+  velocidadRotacionCabeza: 100
   cabezaTanque: {fileID: 631385352}
 --- !u!4 &82110534
 Transform:
@@ -171,6 +171,7 @@ Transform:
   m_Children:
   - {fileID: 1057001308}
   - {fileID: 631385352}
+  - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &82110535
@@ -648,13 +649,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.4372703, y: -0, z: -0, w: 0.89933014}
+  m_LocalPosition: {x: -0.07641284, y: 4.9630327, z: -8.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 82110534}
+  m_LocalEulerAnglesHint: {x: 51.86, y: 0, z: 0}
 --- !u!1 &1057001307
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +883,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0be17d12359ac5d4a888e053febeb7d0, type: 3}
+--- !u!1 &1633475709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633475710}
+  m_Layer: 0
+  m_Name: BalaAparece
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1633475710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633475709}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.69, y: -0.31, z: -0.29}
+  m_LocalScale: {x: 2, y: 3.333333, z: 3.333333}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1823339149}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &1800787559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -959,6 +991,7 @@ GameObject:
   - component: {fileID: 1823339152}
   - component: {fileID: 1823339151}
   - component: {fileID: 1823339150}
+  - component: {fileID: 1823339153}
   m_Layer: 0
   m_Name: Canon
   m_TagString: Untagged
@@ -978,7 +1011,8 @@ Transform:
   m_LocalPosition: {x: -0.51835185, y: 0.27999997, z: 0}
   m_LocalScale: {x: 0.5, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1633475710}
   m_Father: {fileID: 631385352}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1823339150
@@ -1052,6 +1086,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823339148}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1823339153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823339148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb27b5e7fcf5674f9fecb7d00866036, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 1000
+  BalaAparece: {fileID: 1633475710}
+  balaPrefab: {fileID: 2475215446602805571, guid: 5c3241813b212314aa49f6df51b79c71, type: 3}
+  rb: {fileID: 7691449716032024995, guid: 5c3241813b212314aa49f6df51b79c71, type: 3}
 --- !u!1001 &1962691839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1300,7 +1350,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 596103765}
   - {fileID: 5408212497508475640}
