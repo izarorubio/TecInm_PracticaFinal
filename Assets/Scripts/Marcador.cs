@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Marcador : MonoBehaviour
 {
+    public TMP_Text marcadorText;
     public TMP_Text puntosText;
     private int puntos = 0;
     private int totalPuntos = 4;
@@ -26,7 +27,8 @@ public class Marcador : MonoBehaviour
         
         if (puntos == totalPuntos)
         {
-            puntosText.text = "Juego Terminado";
+            Destroy(puntosText.gameObject);
+            marcadorText.text = "Juego Terminado";
         }
     }
 }

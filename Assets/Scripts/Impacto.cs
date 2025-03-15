@@ -4,12 +4,29 @@ using UnityEngine;
 
 public class Impacto : MonoBehaviour
 {
+
+    public AudioSource audio;
+    public AudioClip impacto;
+
+    void Start()
+    {
+        if (audio == null)
+        {
+            audio = GetComponent<AudioSource>();
+        }
+
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Pared"))
         {
             Destroy(collision.gameObject);
             FindAnyObjectByType<Marcador>().SumarPuntos();
+
+            if (impacto != null && audio != null)
+            {
+                audio.PlayOneShot(impacto);
+            }
         }
 
         StartCoroutine(Destruir3Segundos());
@@ -21,11 +38,7 @@ public class Impacto : MonoBehaviour
 
         Destroy(gameObject);
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  
 
     // Update is called once per frame
     void Update()
