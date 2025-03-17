@@ -6,9 +6,7 @@ public class Disparo : MonoBehaviour
 {
     public float velocidad;
     public Transform BalaAparece;
-    public GameObject balaPrefab;
-    public Rigidbody rb;
-    
+    public GameObject balaPrefab;    
 
 
     // Update is called once per frame
@@ -21,11 +19,12 @@ public class Disparo : MonoBehaviour
         
     }
 
+    // Instanciar y lanzar la bala
     private void Disparar()
     {
         GameObject bala = Instantiate(balaPrefab, BalaAparece.position, BalaAparece.rotation);
         Rigidbody balaRb = bala.GetComponent<Rigidbody>();
-        balaRb.AddForce(bala.transform.forward * velocidad);
+        balaRb.AddForce(bala.transform.forward * velocidad); // Aplicar fuerza hacia alante
 
     }
 }

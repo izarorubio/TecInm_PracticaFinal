@@ -199,7 +199,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1001 &179754212
 PrefabInstance:
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 596103763}
   - component: {fileID: 596103762}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -989,7 +989,7 @@ GameObject:
   - component: {fileID: 1057001310}
   - component: {fileID: 1057001309}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cuerpo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1556,8 +1556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 1000
   BalaAparece: {fileID: 1633475710}
-  balaPrefab: {fileID: 2475215446602805571, guid: 5c3241813b212314aa49f6df51b79c71, type: 3}
-  rb: {fileID: 7691449716032024995, guid: 5c3241813b212314aa49f6df51b79c71, type: 3}
+  balaPrefab: {fileID: 1001294907390852557, guid: fac9837fe9d226b4388b86dc9b5b3e02, type: 3}
 --- !u!1001 &1962691839
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -44,8 +44,8 @@ public class TanqueMov : MonoBehaviour
     private void FixedUpdate()
     {
         // Movimiento del tanque
-        float movHorizontal = Input.GetAxis("Horizontal");
-        float movVertical = Input.GetAxis("Vertical");
+        float movHorizontal = Input.GetAxis("Horizontal"); // Rotación
+        float movVertical = Input.GetAxis("Vertical"); // Movimiento alante y atrás
 
         Vector3 movimiento = transform.forward * movVertical * velocidad;
         rb.AddForce(movimiento);
